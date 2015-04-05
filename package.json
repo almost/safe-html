@@ -1,0 +1,33 @@
+{
+  "name": "safe-html",
+  "version": "0.0.1",
+  "description": "A whitelist-based HTML santizier based on the HTML5-conformant parse5 parser",
+  "main": "safe-html.js",
+  "scripts": {
+    "test": "mocha tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/almost/safe-html.git"
+  },
+  "keywords": [
+    "html",
+    "parser",
+    "santitizer",
+    "html5"
+  ],
+  "author": "Thomas Parslow <tom@almostobsolete.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/almost/safe-html.git/issues"
+  },
+  "homepage": "https://github.com/almost/safe-html.git",
+  "dependencies": {
+    "parse5": "^1.4.1",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "jasmine": "^2.2.1"
+  }
+}
