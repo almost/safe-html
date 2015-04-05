@@ -58,4 +58,4 @@ I am not perfect and I make mistakes, *you* are not perfect and you make mistake
 Contributing
 ------------
 
-Fixed or improved stuff? Great! Send me a pull request [through GitHub](http://github.com/almost/through2-concurrent) or get in touch on Twitter [@almostobsolete](https://twitter.com/almostobsolete) or email at [tom@almostobsolete.net](mailto:tom@almostobsolete.net)
+Fixed or improved stuff? Great! Send me a pull request [through GitHub](http://github.com/almost/safe-html) or get in touch on Twitter [@almostobsolete](https://twitter.com/almostobsolete) or email at [tom@almostobsolete.net](mailto:tom@almostobsolete.net)
