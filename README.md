@@ -15,7 +15,8 @@ Written by Thomas Parslow
 [tomparslow.co.uk](http://tomparslow.co.uk)) as part of Active Inbox
 ([activeinboxhq.com](http://activeinboxhq.com/)).
 
-[![Build Status](https://travis-ci.org/almost/safe-html.svg)](https://travis-ci.org/almost/safe-html) 
+[![Build Status](https://travis-ci.org/almost/safe-html.svg)](https://travis-ci.org/almost/safe-html)
+
 You might want to also check out [sanitize-html](https://www.npmjs.com/package/sanitize-html) which has more features and has been around longer.
 
 Install
