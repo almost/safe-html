@@ -22,8 +22,8 @@ module.exports = function sanitize(html, config) {
         output(["<",tagName]);
         _.each(attrs, function (a) {
           var name = a.name, value = a.value;
-          if (_.has(config.allowedAtributes, name)) {
-            var attributeInfo = config.allowedAtributes[name];
+          if (_.has(config.allowedAttributes, name)) {
+            var attributeInfo = config.allowedAttributes[name];
             if ((!attributeInfo.allowedTags && attributeInfo.allTags) ||
                 (attributeInfo.allowedTags && _.contains(attributeInfo.allowedTags, tagName))) {
               if (!attributeInfo.filter || attributeInfo.filter(value)) {
@@ -58,7 +58,7 @@ module.exports = function sanitize(html, config) {
 
 module.exports.DEFAULT_CONFIG = {
   allowedTags: [ 'h3', 'h4', 'h5', 'h6', 'blockquote', 'p', 'a', 'ul', 'ol', 'nl', 'li', 'b', 'i', 'strong', 'em', 'strike', 'code', 'hr', 'br', 'div', 'table', 'thead', 'caption', 'tbody', 'tr', 'th', 'td', 'pre' ],
-  allowedAtributes: {
+  allowedAttributes: {
     'class': {
       allTags: true
     },

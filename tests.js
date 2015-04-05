@@ -23,7 +23,7 @@ describe('safe-html', function () {
     expect(
       safeHtml(
         '<div my-attribute="my&class">Hello World</div>',
-        {allowedAtributes: {'my-attribute': {allTags: true}}}),
+        {allowedAttributes: {'my-attribute': {allTags: true}}}),
       '<div my-attribute="my&amp;class">Hello World</div>');
   });
 
@@ -31,7 +31,7 @@ describe('safe-html', function () {
     expect(
       safeHtml(
         "<div a=hello b='world' c d=\"\">Hello World</div>",
-        {allowedAtributes: {a: {allTags: true}, b: {allTags: true}}}),
+        {allowedAttributes: {a: {allTags: true}, b: {allTags: true}}}),
       '<div a="hello" b="world" c d="">Hello World</div>');
   });
 
