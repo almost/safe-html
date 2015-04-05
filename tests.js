@@ -2,7 +2,6 @@ var safeHtml = require('./safe-html');
 var expect = require('expect.js');
 var _ = require('underscore');
 
-
 describe('safe-html', function () {
   it('should strip tags not in the allowed list', function () {
     expect(safeHtml("<crazyTag>Hello <b>World</b></crazyTag>")).to.equal("Hello <b>World</b>");
