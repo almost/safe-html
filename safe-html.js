@@ -73,5 +73,5 @@ module.exports.DEFAULT_CONFIG = {
   // Drop contents of these tags if they're not in the allowed list
   // (the default is to drop the tag but keep the contents). Tags in
   // here that are also in allowedTags are ignored.
-  dropContents: ["script", "style"]
+  dropContents: ["script", "style", "head", "title"]
 };
