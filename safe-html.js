@@ -26,7 +26,12 @@ module.exports = function sanitize(html, config) {
             var attributeInfo = config.allowedAttributes[name];
             if ((!attributeInfo.allowedTags && attributeInfo.allTags) ||
                 (attributeInfo.allowedTags && _.contains(attributeInfo.allowedTags, tagName))) {
-              if (!attributeInfo.filter || attributeInfo.filter(value)) {
+              if (attributeInfo.filter) {
+                // Filter function can return null to block the
+                // attribute altogether
+                value = attributeInfo.filter(value);
+              }
+              if (value != null) {
                 output([" ", name, '="', escapeHtml(value), '"']);
               }
             }
@@ -66,7 +71,9 @@ module.exports.DEFAULT_CONFIG = {
       allowedTags: ["a"],
       filter: function (value) {
         // Only let through absolute http, mailto and tel urls by default
-        return (/^(https?|mailto|tel):/i).exec(value);
+        if ((/^(https?|mailto|tel):/i).exec(value)) {
+          return value;
+        }
       }
     }
   },
