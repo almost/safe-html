@@ -38,7 +38,7 @@ module.exports = function sanitize(html, config) {
           }
         });
         output([">"]);
-      } else if (_.contains(config.dropContents, tagName)) {
+      } else if (_.contains(config.dropContents, tagName) && !selfClosing) {
         dropContents++;
       }
     },

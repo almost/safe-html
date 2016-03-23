@@ -41,12 +41,14 @@ var config = {
       allowedTags: ["a"],
       filter: function (value) {
         // Only let through http urls
-        return !/^https?:/i.exec(value);
+        if (/^https?:/i.exec(value)) {
+          return value;
+        }
       }
     }
   }
 };
-var santitized = safeHtml("...potentially bad html...")
+var santitized = safeHtml("...potentially bad html...", config);
 ```
 
 Security Warning

@@ -1,6 +1,6 @@
 {
   "name": "safe-html",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "A whitelist-based HTML santizier based on the HTML5-conformant parse5 parser",
   "main": "safe-html.js",
   "scripts": {
